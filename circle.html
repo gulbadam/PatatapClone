@@ -14,18 +14,21 @@ function onKeyDown(event) {
 var maxPoint = new Point(view.size.width, view.size.height);
 var randomPoint= Point.random();
 var point =maxPoint *randomPoint;
-var newCircle =new Path.Circle(point, 10);
+var newCircle =new Path.Circle(point, 300);
 newCircle.fillColor ="orange";
-circle.push(newCircle);
+circles.push(newCircle);};
 //circles.push(new Path.Circle(point, 10).fillColor = 'orange');};
 
 var myCircle2 = new Path.Circle(new Point(300, 300), 150); 
 myCircle2.fillColor = 'yellow';
 
 function onFrame(event) {
- for (var i=0; i <circles.length; i++) { circles[i].fillColor.hue +=1; }
- myCircle2.fillColor.hue+=1;
- //myCircle2.scale(.99);
+ for (var i=0; i <circles.length; i++) { 
+     circles[i].fillColor.hue +=1; 
+     circles[i].scale(.99);
+ }
+ //circles[i].fillColor.hue+=1;
+ //circles[i].scale(.99);
 }
 
 // for (var x=0; x<1000; x+=100){
